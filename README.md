@@ -1,0 +1,1 @@
+# cy-visual-regression
