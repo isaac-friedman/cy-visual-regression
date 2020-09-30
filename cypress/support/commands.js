@@ -23,3 +23,20 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+import {addMatchImageSnapshotCommand} from 'cypress-image-snapshot'
+
+addMatchImageSnapshotCommand({
+  failureThreshold: 0.00,
+  failureThresholdType: 'percent',
+  customDiffConfig: {threshold: 0.0},
+  capture: "viewport"
+})
+
+Cypress.Commands.add("setResolution", (size) => {
+  if(cypress._.isArray(size) {
+    cy.viewport(size[0], size[1])
+  } else {
+    cy.viewport(size)
+  }
+})
