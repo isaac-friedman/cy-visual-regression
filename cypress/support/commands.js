@@ -27,14 +27,14 @@
 import {addMatchImageSnapshotCommand} from 'cypress-image-snapshot/comman'
 
 addMatchImageSnapshotCommand({
-  failureThreshold: 0.00,
+  failureThreshold: 0.1,
   failureThresholdType: 'percent',
   customDiffConfig: {threshold: 0.0},
   capture: "viewport"
 })
 
 Cypress.Commands.add("setResolution", (size) => {
-  if(cypress._.isArray(size) {
+  if(Cypress._.isArray(size) {
     cy.viewport(size[0], size[1])
   } else {
     cy.viewport(size)
