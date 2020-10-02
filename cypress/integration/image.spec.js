@@ -13,3 +13,10 @@ describe("Demonstrates how to compare image snapshots", () => {
 
   });
 })
+
+describe("Single element snapshot", () => {
+  it("Snapshots a single element", () => {
+    cy.visit("https://example.com")
+    cy.get('h1').matchImageSnapshot()
+  })
+})
