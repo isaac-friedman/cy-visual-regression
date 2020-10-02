@@ -6,7 +6,7 @@
   "scripts": {
 		"cy:open": "cypress open",
 		"cy:run": "cypress run",
-    "cy:update-snapshots": "cypress run --env updateSnapshots-true",
+    "cy:update-snapshots": "cypress run --env updateSnapshots=true",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Isaac Friedman",

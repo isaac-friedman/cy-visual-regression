@@ -5,9 +5,9 @@ describe("Demonstrates how to compare image snapshots", () => {
   sizes.forEach(size => {
     pages.forEach(page => {
       it("should compare a snapshot at each size", () => {
-          cy.matchImageSnapshot();
           cy.setResolution(size);
           cy.visit(page)
+          cy.matchImageSnapshot();
       })
     });
 
