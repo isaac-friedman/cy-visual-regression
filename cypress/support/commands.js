@@ -24,19 +24,19 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
-import { addMatchImageSnapshotCommand } from 'cypress-image-snapshot/command'
+import {addMatchImageSnapshotCommand} from "cypress-image-snapshot/command";
 
 addMatchImageSnapshotCommand({
   failureThreshold: 0.1, // threshold for entire image
-  failureThresholdType: 'percent', // percent of image or number of pixels
-  customDiffConfig: { threshold: 0.1 }, // threshold for each pixel
-  capture: 'viewport', // capture viewport in screenshot
-})
+  failureThresholdType: "percent", // percent of image or number of pixels
+  customDiffConfig: {threshold: 0.1}, // threshold for each pixel
+  capture: "viewport", // capture viewport in screenshot
+});
 
-Cypress.Commands.add('setResolution', size => {
+Cypress.Commands.add("setResolution", (size) => {
   if (Cypress._.isArray(size)) {
-    cy.viewport(size[0], size[1])
+    cy.viewport(size[0], size[1]);
   } else {
-    cy.viewport(size)
+    cy.viewport(size);
   }
-})
+});
